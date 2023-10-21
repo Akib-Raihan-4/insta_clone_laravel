@@ -35,7 +35,7 @@ if (iconString.value === 'Log out') icon = Menu
         class="w-full xl:inline-block xl:hover:bg-gray-100 p-2 rounded-full transition duration-300 ease-in-out cursor-pointer">
         <div class="flex items-center">
             <img v-if="iconString === 'Profile'" :class="{ 'mr-1': iconString === 'Profile' }"
-                class="round-full ml-[2px] w-[30px] cursor-pointer" src="https://picsum.photos/id/8/300/320"
+                class="rounded-full ml-[2px] w-[30px] cursor-pointer" src="https://picsum.photos/id/50/300/320"
             >
             <component v-else :is="icon" fillColor="#000000" :size="36" />
             <span class="xl:block hidden text-black font-extrabold text-[18px] pl-2 mt-0.5">

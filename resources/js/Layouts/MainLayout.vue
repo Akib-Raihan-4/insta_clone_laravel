@@ -25,7 +25,6 @@ let showCreatePost = ref(false)
                 <Link href="/">
                 <img class="w-[105px] ml-6 cursor-pointer" src="/insta-logo.png" alt="">
                 </Link>
-
                 <div class="flex items-center w-[50%]">
                     <div class="flex items-center w-full bg-gray-100 rounded-lg">
                         <Magnify class="pl-4" fillColor="#8E8E8E" size="27" />
@@ -41,19 +40,26 @@ let showCreatePost = ref(false)
             <Link href="/" class="px-4">
             <ChevronLeft class="cursor-pointer" size="30" />
             </Link>
-            <div class="font-extrabold text-lg">John Doe</div>
+            <div class="font-extrabold text-lg">
+                John Doe
+            </div>
             <AccountPlusOutline class="cursor-pointer px-4" size="30" />
         </div>
 
         <div id="SideNav" class="fixed h-full bg-white xl:w-[280px] w-[80px] md:block hidden border-r border-r-gray-300">
             <Link href="/">
-                <img src="/insta-logo-small.png" class="xl:hidden block w-[25px] mt-10 ml-[25px] mb-10 cursor-pointer" alt="">
-                <img src="/insta-logo.png" alt="" class="xl:block w-[120px] mt-10 ml-6 mb-10 cursor pointer hidden">
+            <img src="/insta-logo-small.png" class="xl:hidden block w-[25px] mt-10 ml-[25px] mb-10 cursor-pointer" alt="">
+            <img src="/insta-logo.png" alt="" class="xl:block w-[120px] mt-10 ml-6 mb-10 cursor pointer hidden">
             </Link>
             <div class="px-3">
                 <Link href="/">
-                    <MenuItem iconString = "Home" class="mb-4"/>
+                <MenuItem iconString="Home" class="mb-4" />
                 </Link>
+                <MenuItem iconString="Search" class="mb-4" />
+                <MenuItem iconString="Explore" class="mb-4" />
+                <MenuItem iconString="Messages" class="mb-4" />
+                <MenuItem iconString="Notifications" class="mb-4" />
+                <MenuItem iconString="Profile" class="mb-4" />
             </div>
         </div>
         <!-- <slot /> -->
