@@ -16,13 +16,38 @@ let showCreatePost = ref(false)
 </script>
 
 <template>
-    <div id = "MainLayout" class="w-full h-screen">
-        <div v-if="$page.url === '/'" id="TopNavHome" class="fixed z-30 block w-full bg-white h-[61px] border-b border-b-gray-300 md:hidden ">
+    <div id="MainLayout" class="w-full h-screen">
+        <div v-if="$page.url === '/'" id="TopNavHome"
+            class="fixed z-30 block w-full bg-white h-[61px] border-b border-b-gray-300 md:hidden">
             <div class="flex items-center justify-between h-full">
                 <Link href="/">
-                    <img class="w-[105px] ml-6 cursor-pointer" src="/insta-logo.png" alt="">
+                <img class="w-[105px] ml-6 cursor-pointer" src="/insta-logo.png" alt="">
                 </Link>
+
+                <div class="flex items-center w-[50%]">
+                    <div class="flex items-center w-full bg-gray-100 rounded-lg">
+                        <Magnify class="pl-4" fillColor="#8E8E8E" size="27" />
+                        <input type="text" placeholder="Search"
+                            class="bg-transparent border-0 ring-0 focus:ring-0 placeholder-[#8E8E8E]">
+                    </div>
+                    <HeartOutline class="pl-4 pr-3" fillColor="#000000" size="27" />
+                </div>
             </div>
+        </div>
+        <div v-if="$page.url !== '/'" id="TopNavUser"
+            class="md:hidden fixed flex items-center justify-between z-30 w-full bg-white h-[61px] border-b border-b-gray-300">
+            <Link href="/" class="px-4">
+            <ChevronLeft class="cursor-pointer" size="30" />
+            </Link>
+            <div class="font-extrabold text-lg">John Doe</div>
+            <AccountPlusOutline class="cursor-pointer px-4" size="30" />
+        </div>
+
+        <div id="SideNav" class="fixed h-full bg-white xl:w-[280px] w-[80px] md:block hidden border-r border-r-gray-300">
+            <Link href="/">
+                <img src="/insta-logo-small.png" class="xl:hidden block w-[25px] mt-10 ml-[25px] mb-10 cursor-pointer" alt="">
+                <img src="/insta-logo.png" alt="" class="xl:block w-[120px] mt-10 ml-6 mb-10 cursor pointer hidden">
+            </Link>
         </div>
         <!-- <slot /> -->
     </div>
