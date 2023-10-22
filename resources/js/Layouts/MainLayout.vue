@@ -73,36 +73,36 @@ let showCreatePost = ref(false)
             </div>
             <div v-if="$page.url === '/'" id="SuggestionSection" class="lg:w-4/12 lg:block hidden text-black mt-10">
                 <Link href="/" class="flex items-center justify-between max-w-[300px]">
-                <div class="flex items-center">
-                    <img src="https://picsum.photos/id/50/300/320" alt="" class="rounded-full z-10 w-[58px] h-[58px]">
-                    <div class="pl-4">
-                        <div class="text-black font-extrabold">John Doe</div>
-                        <div class="text-gray-500 text-sm font-extrabold">John Doe</div>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/50/300/320" alt="" class="rounded-full z-10 w-[58px] h-[58px]">
+                        <div class="pl-4">
+                            <div class="text-black font-extrabold">John Doe</div>
+                            <div class="text-gray-500 text-sm font-extrabold">John Doe</div>
+                        </div>
                     </div>
-                </div>
                 <button class="text-blue-500 hover:text-gray-900 text-xs font-extrabold">
                     Switch
                 </button>
                 </Link>
-                <div class="max-w-[300px] flex items-center justify-between py-3">
-                    <div class="text-gray-500 font-extrabold">
-                        Suggestions for you
+                    <div class="max-w-[300px] flex items-center justify-between py-3">
+                        <div class="text-gray-500 font-extrabold">
+                            Suggestions for you
+                        </div>
+                        <button class="text-blue-500 hover:text-gray-900 text-xs font-extrabold">
+                            See All
+                        </button>
+                    </div>
+                <Link href="/" class="flex items-center justify-between max-w-[300px] pb-2">
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/51/300/320" alt="" class="rounded-full z-10 w-[37px] h-[37px]">
+                        <div class="pl-4">
+                            <div class="text-black font-extrabold">John Doe</div>
+                            <div class="text-gray-500 text-sm font-extrabold">John Doe</div>
+                        </div>
                     </div>
                     <button class="text-blue-500 hover:text-gray-900 text-xs font-extrabold">
-                        See All
+                        Follow
                     </button>
-                </div>
-                <Link href="/" class="flex items-center justify-between max-w-[300px] pb-2">
-                <div class="flex items-center">
-                    <img src="https://picsum.photos/id/51/300/320" alt="" class="rounded-full z-10 w-[37px] h-[37px]">
-                    <div class="pl-4">
-                        <div class="text-black font-extrabold">John Doe</div>
-                        <div class="text-gray-500 text-sm font-extrabold">John Doe</div>
-                    </div>
-                </div>
-                <button class="text-blue-500 hover:text-gray-900 text-xs font-extrabold">
-                    Follow
-                </button>
                 </Link>
                 <div class="max-w-[300px] mt-5">
                     <div class="text-sm text-gray-400">About Help Press Something Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -112,6 +112,18 @@ let showCreatePost = ref(false)
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="BottomNav" class="fixed z-30 bottom-0 w-full md:hidden flex items-center justify-around bg-white border-t border-t-gray-300 py-2">
+            <Link href="/">
+                <HomeOutline  :size="33" class="cursor-pointer" />
+            </Link>
+            <Compass :size="33" class="cursor-pointer"/>
+            <SendOutline :size="33" class="cursor-pointer"/>
+            <Plus @click="$event => showCreatePost = true" :size="33" class="cursor-pointer"/>
+            <AccountOutline :size="33" class="cursor-pointer"/>
+            <Link href="/">
+                <img src="https://picsum.photos/id/52/300/320" alt="" class="rounded-full w-[30px] cursor-pointer">
+            </Link>
         </div>
     </div>
 </template>
