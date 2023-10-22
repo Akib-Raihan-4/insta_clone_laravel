@@ -59,7 +59,10 @@ let showCreatePost = ref(false)
                 <MenuItem iconString="Explore" class="mb-4" />
                 <MenuItem iconString="Messages" class="mb-4" />
                 <MenuItem iconString="Notifications" class="mb-4" />
-                <MenuItem iconString="Profile" class="mb-4" />
+                <MenuItem @click="$event => showCreatePost = true" iconString = "Create" class="mb-4"/>
+                <Link href="/">
+                    <MenuItem iconString="Profile" class="mb-4" />
+                </Link>
             </div>
             <Link href="/" class="absolute bottom-0 px-3 w-full">
             <MenuItem iconString='Log out' class="mb-4" />
@@ -126,4 +129,5 @@ let showCreatePost = ref(false)
             </Link>
         </div>
     </div>
+    <CreatePostOverlay v-if="showCreatePost" @close="$event => showCreatePost = false"/>
 </template>
